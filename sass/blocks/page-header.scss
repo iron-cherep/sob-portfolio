@@ -16,3 +16,16 @@
 .page-header__main-header {
   @include visuallyhidden;
 }
+
+@media (min-width: 730px) {
+  .page-header {
+    position: static;
+
+    float: right;
+    order: 2;
+    padding: 0;
+
+    width: 150px;
+    height: 100%;
+  }
+}

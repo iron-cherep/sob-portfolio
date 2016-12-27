@@ -1,0 +1,14 @@
+@media (min-width: 730px) {
+  .flex-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 730px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1030px) {
+  .flex-wrapper {
+    width: 1030px;
+  }
+}

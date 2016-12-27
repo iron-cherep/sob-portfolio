@@ -32,3 +32,25 @@
     line-height: 22px;
   }
 }
+
+@media (min-width: 730px) {
+  .aside {
+    position: fixed;
+
+    flex-direction: column;
+    width: 150px;
+    margin-top: 140px;
+  }
+  .aside__logo-img {
+    width: 140px;
+    height: 140px;
+  }
+  .aside__navigation-item {
+    display: block;
+    width: 100%;
+
+    &--small {
+      width: 100%;
+    }
+  }
+}

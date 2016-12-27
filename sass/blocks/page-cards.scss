@@ -88,8 +88,8 @@
 
 @media (min-width: 620px) {
   .page-cards {
-    width: 620px;
     justify-content: center;
+    width: 620px;
   }
 
   .page-cards__card {
@@ -100,4 +100,29 @@
       margin-right: 0;
     }
   }
+}
+
+@media (min-width: 730px) {
+  .page-cards {
+    justify-content: center;
+    width: 730px;
+    margin-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+
+  }
+}
+
+@media (min-width: 1030px) {
+  .page-cards {
+    width: 1030px;
+  }
+
+  .page-cards__card {
+
+    &:nth-child(2n) {
+      margin-right: auto;
+    }
+  }
+
 }
