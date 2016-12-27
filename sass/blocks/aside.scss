@@ -1,0 +1,34 @@
+.aside {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  box-sizing: border-box;
+  width: 280px;
+  margin: 0 auto;
+}
+
+.aside__navigation {
+  margin-left: 12px;
+}
+.aside__navigation-item {
+  margin-right: 5px;
+
+  text-transform: uppercase;
+  color: $pink;
+  font-size: 22px;
+  line-height: 24px;
+
+  &:link, &:active {
+    text-decoration: none;
+    color: $pink;
+  }
+  &:hover {
+    color: $peachy;
+  }
+  &--small {
+    margin-right: 2px;
+
+    font-size: 14px;
+    line-height: 22px;
+  }
+}

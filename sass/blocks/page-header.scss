@@ -1,0 +1,18 @@
+.page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 666;
+
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+
+  text-align: left;
+
+  background-color: white;
+}
+
+.page-header__main-header {
+  @include visuallyhidden;
+}
