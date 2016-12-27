@@ -34,6 +34,7 @@
 }
 
 @media (min-width: 785px) {
+
   .aside {
     position: fixed;
 
@@ -49,5 +50,32 @@
   .aside__navigation-item {
     display: block;
     width: 100%;
+  }
+}
+
+@media (min-width: 1440px) {
+
+  .aside {
+    width: 220px;
+    margin-left: 10px;
+  }
+
+
+  .aside__navigation-item {
+    font-size: 25px;
+    line-height: 27px;
+
+    &--small {
+      font-size: 20px;
+      line-height: 25px;
+    }
+  }
+  .aside__about-group {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .aside__logo-img {
+    width: 200px;
+    height: 200px;
   }
 }
