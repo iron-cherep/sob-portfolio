@@ -1,14 +1,26 @@
-@media (min-width: 730px) {
+.flex-wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  box-sizing: border-box;
+  width: 290px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+@media (min-width: 785px) {
   .flex-wrapper {
     display: flex;
     flex-flow: row nowrap;
-    width: 730px;
+    align-items: flex-start;
+    width: 770px;
     margin: 0 auto;
+    padding: 0;
   }
 }
 
-@media (min-width: 1030px) {
+@media (min-width: 1120px) {
   .flex-wrapper {
-    width: 1030px;
-  }
+    width: 1020px;
+    }
 }

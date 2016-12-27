@@ -6,9 +6,8 @@
 
   box-sizing: border-box;
   width: 100%;
+  margin: 0;
   padding: 10px;
-
-  text-align: left;
 
   background-color: white;
 }
@@ -17,15 +16,14 @@
   @include visuallyhidden;
 }
 
-@media (min-width: 730px) {
+@media (min-width: 785px) {
   .page-header {
     position: static;
 
-    float: right;
     order: 2;
-    padding: 0;
-
     width: 150px;
     height: 100%;
+    margin: 0;
+    padding: 0;
   }
 }

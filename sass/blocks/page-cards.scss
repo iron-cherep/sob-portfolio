@@ -1,13 +1,9 @@
 .page-cards {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   box-sizing: border-box;
-  width: 320px;
-  margin: 0 auto;
+  width: 280px;
   margin-top: 64px;
-  padding: 20px 20px 0 20px;
-
-  text-align: center;
 }
 
 
@@ -19,9 +15,11 @@
   justify-content: center;
   box-sizing: border-box;
   width: 280px;
-  min-height: 280px;
-  margin: 0 0 40px 0;
+  height: 280px;
+  margin: 0 0 20px 0;
   overflow: hidden;
+
+  text-align: center;
 }
 .page-cards__card:hover {
   .page-cards__info {
@@ -88,8 +86,10 @@
 
 @media (min-width: 620px) {
   .page-cards {
+    flex-direction: row;
     justify-content: center;
-    width: 620px;
+    flex-wrap: wrap;
+    width: 600px;
   }
 
   .page-cards__card {
@@ -102,27 +102,32 @@
   }
 }
 
-@media (min-width: 730px) {
+@media (min-width: 785px) {
   .page-cards {
     justify-content: center;
-    width: 730px;
-    margin-top: 0;
-    padding-left: 0;
-    padding-right: 0;
-
+    width: 580px;
+    margin-top: 20px;
+    margin-left: 0px;
+    padding: 0;
   }
 }
 
-@media (min-width: 1030px) {
+@media (min-width: 1120px) {
   .page-cards {
-    width: 1030px;
+    flex-shrink: 0;
+    width: 880px;
   }
 
   .page-cards__card {
+    margin-right: 20px;
 
     &:nth-child(2n) {
-      margin-right: auto;
+      margin-right: 20px;
     }
+    &:nth-child(3n) {
+      margin-right: 0px;
+    }
+
   }
 
 }
