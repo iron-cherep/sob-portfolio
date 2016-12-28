@@ -6,7 +6,9 @@
   width: 280px;
   margin: 0 auto;
 }
-
+.aside__links-group {
+  margin-left: 2px;
+}
 .aside__navigation {
   margin-left: 12px;
 }
@@ -15,8 +17,9 @@
 
   text-transform: uppercase;
   color: $pink;
-  font-size: 22px;
+  font-size: 18px;
   line-height: 24px;
+  letter-spacing: -0.4px;
 
   &:link, &:active {
     text-decoration: none;
@@ -51,6 +54,10 @@
     display: block;
     width: 100%;
   }
+  .aside__about-group {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 }
 
 @media (min-width: 1440px) {
@@ -62,12 +69,15 @@
 
 
   .aside__navigation-item {
+    padding: 3px;
+
     font-size: 25px;
     line-height: 27px;
 
     &--small {
       font-size: 20px;
       line-height: 25px;
+      padding: 0;
     }
   }
   .aside__about-group {

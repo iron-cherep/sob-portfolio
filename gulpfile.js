@@ -42,7 +42,7 @@ gulp.task("style", function() {
 //copy html files to build directory - needed to process html change event
 gulp.task("html", function() {
   return gulp.src([
-    "*.html"
+    "*.html", "project-pages/*.html"
   ], {
     base: "."
   })
@@ -90,7 +90,7 @@ gulp.task("serve", function() {
 
 
   gulp.watch("sass/**/*.scss", ["style"]);
-  gulp.watch("*.html", ["html"]); //watches for html in root directory and copy them to /build on changes
+  gulp.watch(["*.html", "project-pages/*.html"], ["html"]); //watches for html in root directory and copy them to /build on changes
   gulp.watch("build/*.html").on("change", server.reload); //watches for html in build directory
   gulp.watch("js/*.js", ["js"]); //watches for JS in root directory and copy them to /build on changes
   gulp.watch("build/js/*.js").on("change", server.reload); //watches for JS in build directory
