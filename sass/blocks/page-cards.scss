@@ -97,8 +97,10 @@
   width: 100%;
   margin-bottom: 5px;
 
+  font-size: 20px;
+  line-height: 20px;
   font-weight: normal;
-  text-align: center;
+  text-align: left;
   text-transform: uppercase;
   color: $pink;
 
@@ -114,7 +116,6 @@
 .page-cards__text {
   line-height: 28px;
   text-align: left;
-  text-indent: 10px;
 }
 
 .page-cards__card--responsive {
@@ -138,8 +139,13 @@
     height: 100%;
   }
 }
+.page-cards__card--single {
+  width: 100%;
+}
+
+//в узком вьюпорте элементы с половинной шириной растягиваются на 100%
 .page-cards__card--half-width {
-  width: 50%;
+  width: 100%;
 
   .page-cards__card-image {
     width: 100%;
@@ -173,7 +179,17 @@
     margin: 5px;
     margin-bottom: 5px;
   }
+  .page-cards__card--half-width {
+    width: calc(50% - 20px);
+
+    .page-cards__card-image {
+      width: 100%;
+    }
+  }
+
   .page-cards__header {
+    font-size: 32px;
+    line-height: 32px;
     text-align: left;
 
     span {
@@ -181,9 +197,10 @@
       width: auto;
 
 
-      font-size: 31px;
-      line-height: 37px;
+      font-size: 32px;
+      line-height: 32px;
       font-weight: normal;
+      vertical-align: baseline;
     }
   }
 
@@ -215,11 +232,16 @@
     width: 880px;
   }
 
-  .page-cards__card {
+  .page-cards__card--responsive {
+    width: auto;
+    height: auto;
+  }
 
-    &--responsive {
-      width: auto;
-      height: auto;
+  .page-cards__card--half-width {
+    width: calc(50% - 20px);
+
+    .page-cards__card-image {
+      width: 100%;
     }
   }
 
@@ -250,6 +272,15 @@
     &--responsive {
       width: auto;
       height: auto;
+    }
+  }
+
+  .page-cards__card--half-width {
+
+    width: calc(50% - 20px);
+
+    .page-cards__card-image {
+      width: 100%;
     }
   }
 
