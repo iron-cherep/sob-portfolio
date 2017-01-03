@@ -102,15 +102,15 @@
   font-weight: normal;
   text-align: left;
   text-transform: uppercase;
-  color: $pink;
+  color: $peachy;
 
   span {
     display: block;
     width: 100%;
 
-    font-family: "Roboto", "Tahoma", sans-serif;
-    font-size: 20px;
-    color: $peachy;
+    font-size: inherit;
+    line-height: inherit;
+    color: $pink;
   }
 }
 .page-cards__text {
@@ -152,6 +152,7 @@
   }
 }
 .page-cards__card--wide {
+  width: 100%;
 
   .page-cards__card-image {
     width: 100%;
@@ -180,6 +181,7 @@
     margin-bottom: 5px;
   }
   .page-cards__card--half-width {
+    width: 40%;
     width: calc(50% - 20px);
 
     .page-cards__card-image {
@@ -195,12 +197,6 @@
     span {
       display: inline;
       width: auto;
-
-
-      font-size: 32px;
-      line-height: 32px;
-      font-weight: normal;
-      vertical-align: baseline;
     }
   }
 
@@ -238,6 +234,7 @@
   }
 
   .page-cards__card--half-width {
+    width: 40%;
     width: calc(50% - 20px);
 
     .page-cards__card-image {
@@ -246,12 +243,12 @@
   }
 
   .page-cards__card--wide {
+    width: 100%;
 
     .page-cards__card-image {
-      width: auto;
+      width: 100%;
       height: auto;
       max-width: 880px;
-      max-height: 95vh;
     }
   }
 
@@ -276,7 +273,7 @@
   }
 
   .page-cards__card--half-width {
-
+    width: 40%;
     width: calc(50% - 20px);
 
     .page-cards__card-image {
@@ -295,11 +292,6 @@
 
     font-size: 50px;
     line-height: 50px;
-
-    span {
-      font-size: 50px;
-      line-height: 50px;
-    }
   }
   .page-cards__text {
     margin-left: 20px;
@@ -311,6 +303,7 @@
   .page-cards__card--wide {
 
     .page-cards__card-image {
+      width: 100%;
       max-width: 1180px;
     }
 
