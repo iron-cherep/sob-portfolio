@@ -1,0 +1,3 @@
+[submodule "sob-blog-build"]
+	path = sob-blog-build
+	url = git@github.com:iron-cherep/sob-blog-build.git
