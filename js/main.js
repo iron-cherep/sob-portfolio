@@ -31,6 +31,6 @@ $(document).ready(function() {
   //инициализируем метод плагина scrollSpeed для ускоренного скролла на десктопе
   ////////
 
-  jQuery.scrollSpeed(200, 800);
+  jQuery.scrollSpeed(100, 200);
 
 });
