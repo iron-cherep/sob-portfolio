@@ -1,0 +1,135 @@
+.form {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 280px;
+  min-height: 80vh;
+}
+.form__header {
+  margin-bottom: 10px;
+
+  font-size: 20px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: $pink;
+
+  &::after {
+    display: inline-block;
+    content: " ͡° ͜ʖ ͡°";
+    margin-left: 1em;
+  }
+}
+
+
+.form__form-fields {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.form__label {
+  @include visuallyhidden;
+}
+.form__textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 150px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding: 10px;
+
+  border: 1px solid $pink;
+  border-radius: 2px;
+
+  resize: none;
+
+  &:hover {
+    border-color: $peachy;
+  }
+}
+.form__input {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+
+  border: 1px solid $pink;
+  border-radius: 2px;
+
+  &:hover {
+    border-color: $peachy;
+  }
+}
+.form__recaptcha {
+  margin-top: 10px;
+  transform: scale(0.92);
+}
+.form__button {
+  box-sizing: border-box;
+  margin-top: 10px;
+  margin-left: auto;
+  padding: 10px;
+
+  background-color: $pink;
+  border: none;
+  border-radius: 10px;
+
+  font-family: "Roboto Condensed", "Tahoma", sans-serif;
+  color: white;
+
+  transition: all 0.1s ease-in-out;
+
+  &:hover {
+    background-color: $peachy;
+  }
+  &:active {
+    background-color: $pink;
+  }
+
+}
+
+@media (min-width: 620px) {
+  .form {
+    width: 580px;
+  }
+  .form__header {
+    font-size: 32px;
+  }
+  .form__form-fields {
+    justify-content: flex-start;
+  }
+  .form__button {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .form__recaptcha {
+    margin-top: 10px;
+    transform: none;
+  }
+}
+@media (min-width: 785px) {
+  .form {
+    width: 580px;
+    min-height: 100vh;
+  }
+}
+
+@media (min-width: 1120px) {
+  .form {
+    width: 880px;
+  }
+  .form__form-fields {
+    width: 70%;
+  }
+}
+@media (min-width: 1440px) {
+  .form {
+    width: 1180px;
+  }
+  .form__header {
+    font-size: 50px;
+  }
+}

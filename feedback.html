@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>SobIgdrasil Blog</title>
   <link rel="stylesheet" href="../css/style.min.css">
+  <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
 
@@ -13,11 +14,11 @@
 
   <header class="page-header">
     <aside class="aside">
-      <a href="../index.html" class="aside__logo-link"><img class="aside__logo-img" src="../img/avatar@x1.jpg" srcset="../img/avatar@x2.jpg 2x" alt="logo"  width="60" height="60"></a>
+      <a href="index.html" class="aside__logo-link"><img class="aside__logo-img" src="img/avatar@x1.jpg" srcset="img/avatar@x2.jpg" alt="logo"  width="60" height="60"></a>
       <nav class="aside__navigation">
         <div class="aside__about-group">
-          <a href="../about.html" class="aside__navigation-item">обо мне</a>
-          <a href="../feedback.html" class="aside__navigation-item">задать вопрос</a>
+          <a href="about.html" class="aside__navigation-item">обо мне</a>
+          <a href="feedback.html" class="aside__navigation-item">задать вопрос</a>
         </div>
         <div class="aside__links-group">
           <a class="aside__navigation-item  aside__navigation-item--small" href="https://vk.com/sob_igdrasil">vk</a>
@@ -29,18 +30,23 @@
     </aside>
   </header>
 
-  <main class="page-cards">
+  <article class="form">
 
-    <h1 class="page-cards__header">ludum dare: satan inc. <br><span>арт для игры</span></h1>
-    <p class="page-cards__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quaerat, quas soluta error quidem, repellendus eligendi ad voluptatibus vel deserunt, dolorem totam enim natus doloribus non impedit quis iure inventore. </p>
+    <h1 class="form__header">напиши мне</h1>
+    <form  class="form__form-fields">
+      <label class="form__label" for="form__message">сообщение</label>
+      <textarea class="form__textarea" id="form__message" placeholder="Привет, Sob! На неделе хозяйка велела мне почистить селедку, а я начал с хвоста..." required></textarea>
 
-    <figure class="page-cards__card  page-cards__card--responsive page-cards__card--wide">
-      <picture>
-        <img class="page-cards__card-image" src="../img/projects/6_satan_inc/комик_black.png" width="280"  alt="winter comics">
-      </picture>
-    </figure>
+      <label class="form__label" for="form__e-mail">e-mail</label>
+      <input class="form__input" type="e-mail" id="form__e-mail" placeholder="ivan@mail.ru" required>
 
-  </main>
+      <div class="g-recaptcha form__recaptcha" data-sitekey="6LdqThEUAAAAAO1riAze4Dhur-mWupHsBscDAUgz"></div>
+
+      <button class="form__button">Отправить</button>
+    </form>
+
+  </article>
+
 </div> <!-- ends flex-wrapper -->
 
   <script src="../js/jquery-2.2.4.min.js"></script>

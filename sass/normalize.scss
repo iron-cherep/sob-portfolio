@@ -254,8 +254,10 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: sans-serif; /* 1 */
+  // font-family: sans-serif; /* 1 */
+  font-family: "Roboto", "Tahoma", sans-serif;
   font-size: 100%; /* 1 */
+  font-weight: bold;
   line-height: 1.15; /* 1 */
   margin: 0; /* 2 */
 }
