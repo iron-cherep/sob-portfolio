@@ -6,7 +6,26 @@
   width: 280px;
   margin: 0 auto;
 }
+.aside__about-group {
+  position: relative;
+  margin-bottom: 2px;
+
+  &::after {
+    position: absolute;
+    bottom: 0px; left: 2px;
+
+    width: 97%;
+
+    border-bottom: 1px solid $light;
+
+    content: "";
+  }
+}
 .aside__links-group {
+  display: flex;
+  flex-flow: row wrap;
+
+  max-width: 160px;
   margin-left: 2px;
 }
 .aside__navigation {
@@ -27,13 +46,22 @@
   }
   &:hover {
     color: $peachy;
+
+    svg path {
+      fill: $peachy;
+    }
   }
   &--small {
-    margin-right: 2px;
+    position: relative;
+    margin-right: 8px;
 
     font-size: 14px;
-    line-height: 22px;
+    line-height: 1.2;
+   }
+  svg {
+    display: none;
   }
+
 }
 
 @media (min-width: 785px) {
@@ -51,12 +79,30 @@
     height: 140px;
   }
   .aside__navigation-item {
+    position: relative;
+
     display: block;
     width: 100%;
+
+    &--small {
+      margin-bottom: 0.3em;
+    }
+    svg {
+      position: absolute;
+      right: 50%;
+
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+    }
   }
   .aside__about-group {
     margin-top: 20px;
     margin-bottom: 20px;
+
+    &::after {
+      content: none;
+    }
   }
 }
 

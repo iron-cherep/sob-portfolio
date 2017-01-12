@@ -5,9 +5,9 @@ var sass = require("gulp-sass");
 var plumber = require("gulp-plumber");
 var server = require("browser-sync").create();
 var run = require("run-sequence");
-
 var rename = require("gulp-rename");
 var del = require("del");
+var php_server = require('gulp-connect-php');
 
 var postcss = require("gulp-postcss");
 var mqpacker = require("css-mqpacker");
@@ -59,6 +59,24 @@ gulp.task("js", function() {
     .pipe(gulp.dest("build"));
 })
 
+gulp.task("html", function() {
+  return gulp.src([
+    "*.html", "project-pages/*.html"
+  ], {
+    base: "."
+  })
+    .pipe(gulp.dest("build"));
+})
+
+gulp.task("php", function() {
+  return gulp.src([
+    "*.php"
+  ], {
+    base: "."
+  })
+    .pipe(gulp.dest("build"));
+})
+
 gulp.task("symbols", function() {
   return gulp.src("build/img/icons-for-sprite/*.svg")
     .pipe(svgmin())
@@ -78,9 +96,14 @@ gulp.task("images", function() {
   .pipe(gulp.dest("img/"));
 });
 
-gulp.task("serve", function() {
+gulp.task("php_server", function() {
+  php_server.server({ base: 'build', port: 8010, keepalive: true});
+});
+
+gulp.task("serve",["php_server"], function() {
   server.init({
-    server: "build",
+    proxy: '127.0.0.1:8010',
+    port: 8080,
     ghostMode: false,
     notify: false,
     open: true,
@@ -89,10 +112,13 @@ gulp.task("serve", function() {
   });
 
 
-  gulp.watch("sass/**/*.scss", ["style"]);
-  gulp.watch(["*.html", "project-pages/*.html"], ["html"]); //watches for html in root directory and copy them to /build on changes
+  gulp.watch(["*.html", "project-pages/*.html"], ["html"]); //watches for HTML in root directory
+  gulp.watch("*.php", ["php"]); //watches for PHP in root directory
+  gulp.watch("js/*.js", ["js"]); //watches for JS in root directory
+  gulp.watch("sass/**/*.scss", ["style"]); //watches for SCSS in root directory
+
   gulp.watch("build/*.html").on("change", server.reload); //watches for html in build directory
-  gulp.watch("js/*.js", ["js"]); //watches for JS in root directory and copy them to /build on changes
+  gulp.watch("build/*.php").on("change", server.reload); //watches for PHP in build directory
   gulp.watch("build/js/*.js").on("change", server.reload); //watches for JS in build directory
 
 });
@@ -103,7 +129,9 @@ gulp.task("copy", function() {
     "img/**",
     "js/**",
     "icons/**",
+    "project-pages/**",
     "*.ico",
+    "*.php",
     "*.html"
   ], {
     base: "."
