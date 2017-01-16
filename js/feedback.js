@@ -1,12 +1,18 @@
 $(document).ready(function() {
 
   allowSubmit = false;
-  console.log("allowSubmit: " + allowSubmit);
 
   $("form").submit(function(e){
     if(allowSubmit) return true;
 
-    console.log("fill in the captcha!");
+    var animationEnd = "webkitAnimationEnd oanimationend msAnimationEnd animationend";
+    var recaptcha = $(".form__recaptcha");
+
+    recaptcha.addClass("shake");
+    recaptcha.one(animationEnd, function(e) {
+      recaptcha.removeClass("shake");
+    });
+
     e.preventDefault(e);
   });
 

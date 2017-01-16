@@ -23,7 +23,6 @@
 }
 
 
-
 .form__form-fields {
   display: flex;
   flex-flow: row wrap;
@@ -67,6 +66,13 @@
 .form__recaptcha {
   margin-top: 10px;
   transform: scale(0.92);
+
+  &.shake {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
 }
 .form__button {
   box-sizing: border-box;
