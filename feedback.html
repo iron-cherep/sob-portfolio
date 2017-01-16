@@ -6,6 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>SobIgdrasil Blog</title>
   <link rel="stylesheet" href="../css/style.min.css">
+
+  <script src="../js/jquery-2.2.4.min.js"></script>
+  <script src="../js/feedback.js"></script>
   <script src='https://www.google.com/recaptcha/api.js'></script>
 
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
@@ -54,7 +57,7 @@
       <label class="form__label" for="form__e-mail">e-mail</label>
       <input class="form__input" name="form__email" type="e-mail" id="form__e-mail" placeholder="ivan@mail.ru" required>
 
-      <div class="g-recaptcha form__recaptcha" data-sitekey="6LdqThEUAAAAAO1riAze4Dhur-mWupHsBscDAUgz"></div>
+      <div class="g-recaptcha form__recaptcha" data-callback="capchaFilled" data-expired-callback="capchaExpired" data-sitekey="6LdqThEUAAAAAO1riAze4Dhur-mWupHsBscDAUgz"></div>
 
       <button class="form__button">Отправить</button>
     </form>
@@ -63,9 +66,6 @@
 
 </div> <!-- ends flex-wrapper -->
 
-  <script src="../js/jquery-2.2.4.min.js"></script>
-  <script src="../js/jQuery.scrollSpeed.js"></script>
-  <script src="../js/main.js"></script>
 
 </body>
 </html>
