@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SobIgdrasil Blog</title>
+  <link rel="stylesheet" href="../css/style.min.css">
+
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body>
+  <div class="form__response">
+
+      <?php if ($send): ?>
+        <h1 class="form__header  form__header--response">Сообщение успешно отправлено!</h1>
+        <a class="form__button  form__button--response" href="index.html">на главную</a>
+      <?php else: ?>
+        <h1 class="form__header  form__header--response">Ошибка отправки! Попробуйте ещё раз!</h1>
+        <div class="form__buttons-group">
+          <a class="form__button  form__button--response" href="feedback.html">я попробую!</a>
+          <a class="form__button  form__button--response" href="index.html">нет, на главную!</a>
+        </div>
+      <?php endif; ?>
+
+  </div>
+</body>
+</html>

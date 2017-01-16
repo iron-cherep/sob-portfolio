@@ -23,6 +23,7 @@
 }
 
 
+
 .form__form-fields {
   display: flex;
   flex-flow: row wrap;
@@ -88,7 +89,42 @@
   &:active {
     background-color: $pink;
   }
+  &:link, &:visited {
+    text-decoration: none;
+    color: white;
+  }
+}
 
+.form__response {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+.form__buttons-group {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  width: 100%;
+  margin: 1em;
+}
+.form__header--response {
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+
+  &::after {
+    content: none;
+  }
+}
+.form__button--response {
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 @media (min-width: 620px) {
@@ -104,6 +140,10 @@
   .form__button {
     margin-right: auto;
     margin-left: auto;
+  }
+  .form__button--response {
+    margin-left: 1em;
+    margin-right: 1em;
   }
   .form__recaptcha {
     margin-top: 10px;
