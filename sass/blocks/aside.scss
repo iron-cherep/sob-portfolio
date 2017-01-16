@@ -9,29 +9,20 @@
 .aside__about-group {
   position: relative;
   margin-bottom: 2px;
-
-  &::after {
-    position: absolute;
-    bottom: 0px; left: 2px;
-
-    width: 97%;
-
-    border-bottom: 1px solid $light;
-
-    content: "";
-  }
 }
 .aside__links-group {
   display: flex;
   flex-flow: row wrap;
-
-  max-width: 160px;
+  justify-content: space-between;
+  width: 100%;
   margin-left: 2px;
 }
 .aside__navigation {
   margin-left: 12px;
 }
 .aside__navigation-item {
+  position: relative;
+
   margin-right: 5px;
 
   text-transform: uppercase;
@@ -99,10 +90,6 @@
   .aside__about-group {
     margin-top: 20px;
     margin-bottom: 20px;
-
-    &::after {
-      content: none;
-    }
   }
 }
 
