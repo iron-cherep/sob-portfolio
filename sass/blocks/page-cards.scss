@@ -262,8 +262,13 @@
 
 @media (min-width: 1440px) {
   .page-cards {
-    width: 1160px;
-    margin-left: 20px;
+    width: 1180px;
+    margin-left: 0;
+
+    &:not(.page-cards--no-margin) {
+      width: 1160px;
+      margin-left: 20px;
+    }
   }
 
   .page-cards__card {
@@ -302,13 +307,6 @@
       width: 100%;
       max-width: 1180px;
     }
-
-    &.page-cards__card--single {
-      max-height: auto;
-    }
-
   }
-  .page-cards__card--align-left {
-    margin-left: 20px;
-  }
+
 }
