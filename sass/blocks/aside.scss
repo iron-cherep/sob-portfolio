@@ -6,6 +6,24 @@
   width: 280px;
   margin: 0 auto;
 }
+.aside__logo-link {
+  display: block;
+  width: 60px;
+  height: 60px;
+
+  background: url("../img/avatar-sprite@200.jpg") top center no-repeat;
+  background-size: 100% auto;
+
+  cursor: pointer;
+
+  &:hover {
+    animation-name: sprite-wink;
+    animation-duration: 0.4s;
+    animation-iteration-count: 1;
+    animation-timing-function: steps(8);
+  }
+}
+
 .aside__about-group {
   position: relative;
   margin-bottom: 2px;
@@ -52,7 +70,6 @@
   svg {
     display: none;
   }
-
 }
 
 @media (min-width: 785px) {
@@ -65,7 +82,7 @@
     margin-top: 140px;
     margin-left: 20px;
   }
-  .aside__logo-img {
+  .aside__logo-link {
     width: 140px;
     height: 140px;
   }
@@ -112,12 +129,16 @@
       line-height: 25px;
       padding: 0;
     }
+    svg {
+      right: 54%;
+      top: 10%;
+    }
   }
   .aside__about-group {
     margin-top: 40px;
     margin-bottom: 40px;
   }
-  .aside__logo-img {
+  .aside__logo-link {
     width: 200px;
     height: 200px;
   }

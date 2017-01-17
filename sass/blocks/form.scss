@@ -66,6 +66,7 @@
 .form__recaptcha {
   margin-top: 10px;
   transform: scale(0.92);
+  transition: scale 0.2s ease-in-out;
 
   &.shake {
     animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;

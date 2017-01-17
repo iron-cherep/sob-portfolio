@@ -21,6 +21,24 @@
 
   border-radius: 50%;
 }
+.about__info {
+  margin-bottom: 20px;
+  padding-left: 0;
+
+  font-family: "Roboto","Tahoma",sans-serif;
+  line-height: 28px;
+  text-align: center;
+  list-style: none;
+  color: $dark;
+
+  li {
+    margin-bottom: 0.8em;
+
+    a:link, a:visited {
+      color: $dark;
+    }
+  }
+}
 
 @media (min-width: 620px) {
   .about {

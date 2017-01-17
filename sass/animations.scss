@@ -21,3 +21,18 @@ transform: translate3d(0, 0, 0);
 backface-visibility: hidden;
 perspective: 1000px;
 */
+
+@keyframes sprite-wink {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 bottom;
+  }
+}
+/*
+animation-name: sprite-wink;
+animation-duration: 0.3s;
+animation-iteration-count: 1;
+animation-timing-function: steps(8);
+*/
