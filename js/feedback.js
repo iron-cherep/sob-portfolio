@@ -3,7 +3,11 @@ $(document).ready(function() {
   allowSubmit = false;
 
   $("form").submit(function(e){
-    if(allowSubmit) return true;
+    if (allowSubmit) {
+      $(".form__spinner-wrapper").removeClass("form__spinner-wrapper--hidden");
+
+      return true;
+    }
 
     var animationEnd = "webkitAnimationEnd oanimationend msAnimationEnd animationend";
     var recaptcha = $(".form__recaptcha");

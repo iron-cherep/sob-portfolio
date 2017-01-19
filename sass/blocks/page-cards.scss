@@ -75,13 +75,13 @@
   display: block;
   width: 30px;
   height: 30px;
-  margin-top: 15px;
   margin-right: auto;
   margin-left: auto;
+  padding: 15px;
 
   background-color: black;
   background: url("../img/right-arrow.svg") 50% 50% no-repeat;
-  background-size: cover;
+  background-size: 2em;
 
   &:hover {
     opacity: 0.6;
@@ -280,7 +280,10 @@
       height: auto;
     }
   }
-
+  .page-cards__link {
+    margin-top: 5px;
+    background-size: 1.5em;
+  }
 
   .page-cards__info {
     font-size: 25px;
